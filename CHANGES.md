@@ -6,7 +6,7 @@
 
 ##### Fixes :wrench:
 
-- Fixed issue with calling `switchToOrthographicFunction` and `camera.flyTo` in immediate succession. [#11210](https://github.com/CesiumGS/cesium/pull/11210)
+- Fixed an issue when zooming in an orthographic frustum. [#11206](https://github.com/CesiumGS/cesium/pull/11206)
 
 ### 1.104 - 2023-04-03
 
