@@ -6,14 +6,7 @@
 
 ##### Fixes :wrench:
 
-- Fixed atmosphere rendering performance issue. [10510](https://github.com/CesiumGS/cesium/issues/10510)
-
-#### @cesium/widgets
-
-##### Fixes :wrench:
-
-- Fixed missing `ContextOptions` in generated TypeScript definitions. [10963](https://github.com/CesiumGS/cesium/issues/10963)
-- Fixed model rendering when emissiveTexture is defined and emissiveFactor is not. [#11215](https://github.com/CesiumGS/cesium/pull/11215)
+- Fixed issue with calling `switchToOrthographicFunction` and `camera.flyTo` in immediate succession. [#11210](https://github.com/CesiumGS/cesium/pull/11210)
 
 ### 1.104 - 2023-04-03
 
