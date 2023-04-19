@@ -750,7 +750,7 @@ describe(
       }).toThrowDeveloperError();
     });
 
-    it("can zoom to entity when globe is disabled", function () {
+    it("can zoom to entity when globe is disabled", function (done) {
       // Create container element for viewer
       const container = document.createElement("div");
       container.id = "cesiumContainer";
@@ -778,14 +778,16 @@ describe(
         },
       });
 
-      viewer.zoomTo(entity);
+      viewer.zoomTo(entity).then(() => {
+        // Verify that no errors occurred
+        expect(defined(viewer.scene)).toBe(true);
+        expect(defined(viewer.scene.errorEvent)).toBe(false);
 
-      // Verify that no errors occurred
-      expect(viewer.scene).toBeDefined();
-      expect(viewer.scene.errorEvent).toBeUndefined();
+        // Remove container element
+        document.body.removeChild(container);
 
-      // Remove container element
-      document.body.removeChild(container);
+        done();
+      });
     });
   },
   "WebGL"
